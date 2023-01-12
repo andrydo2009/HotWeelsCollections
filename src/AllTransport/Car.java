@@ -90,25 +90,27 @@ public class Car extends Transport implements Contest {
     }
 
 
-
     @Override
     public void addMechanicTeamRacing(List<Mechanic> mechanics) {
-        System.out.println ("Автомобиль " + getBrand () + " " + getModel () + ", объем двигателя " + getEngineVolume ());
-        for (Mechanic value : mechanic)
-        { if (value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR||value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_UNIVERSAL)
-        {System.out.println ( "- обслуживает " + value);}
+        System.out.println ( "Автомобиль " + getBrand () + " " + getModel () + ", объем двигателя " + getEngineVolume () );
+        for (Mechanic value : mechanic) {
+            if (value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR || value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_UNIVERSAL) {
+                System.out.println ( "- обслуживает " + value );
+            }
         }
     }
 
     @Override
     public void doRegularService(List<Mechanic> mechanics) {
-        System.out.println ("Механики :");
-        for (Mechanic value : mechanic)
-        { if (value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR||value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_UNIVERSAL)
-        {System.out.println ( "- " + value);}
+        System.out.println ( "Механики :" );
+        for (Mechanic value : mechanic) {
+            if (value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR || value.getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_UNIVERSAL) {
+                System.out.println ( "- " + value );
+            }
         }
-         System.out.println ("производят регулярное ТО на автомобиле " + getBrand ()+" "+getModel ());
+        System.out.println ( "производят регулярное ТО на автомобиле " + getBrand () + " " + getModel () );
 
 
     }
 }
+

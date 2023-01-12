@@ -7,26 +7,21 @@ public abstract class Driver {
     String driverLicenseCategory;
     final int experienceDriver;
 
-    public Driver(String fullNameDriver , String driverLicenseCategory , int experienceDriver)  {
+    public Driver(String fullNameDriver , String driverLicenseCategory , int experienceDriver) {
         if (fullNameDriver == null || fullNameDriver.isBlank ()) {
             this.fullNameDriver = "No name";
-        }
-        else {
+        } else {
             this.fullNameDriver = fullNameDriver;
         }
 
         try {
-            if (driverLicenseCategory == null || driverLicenseCategory.isBlank ())
-            {
-                throw new CantDriverLicenseException ("Проверьте корректность ввода категории прав водителя");
-            }
-            else {
+            if (driverLicenseCategory == null || driverLicenseCategory.isBlank ()) {
+                throw new CantDriverLicenseException ( "Проверьте корректность ввода категории прав водителя" );
+            } else {
                 this.driverLicenseCategory = driverLicenseCategory;
             }
-        }
-        catch (CantDriverLicenseException e)
-        {
-            System.out.println (e.getMessage ());
+        } catch (CantDriverLicenseException e) {
+            System.out.println ( e.getMessage () );
         }
 
         if (experienceDriver <= 0) {
@@ -78,3 +73,4 @@ public abstract class Driver {
 
 
 }
+

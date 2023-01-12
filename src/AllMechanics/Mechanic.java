@@ -1,11 +1,5 @@
 package AllMechanics;
 
-import AllTransport.Bus;
-import AllTransport.Car;
-import AllTransport.Transport;
-import AllTransport.Truck;
-
-import java.util.List;
 import java.util.Objects;
 
 public class Mechanic {
@@ -41,9 +35,11 @@ public class Mechanic {
     }
 
     public void setMarketCompany(String marketCompany) {
-        if(marketCompany==null||marketCompany.isBlank ()||marketCompany.isEmpty ())
-        { this.marketCompany = " механик автодрома ";}
-        else {this.marketCompany= marketCompany;}
+        if (marketCompany == null || marketCompany.isBlank () || marketCompany.isEmpty ()) {
+            this.marketCompany = " механик автодрома ";
+        } else {
+            this.marketCompany = marketCompany;
+        }
     }
 
 
@@ -62,47 +58,8 @@ public class Mechanic {
 
     @Override
     public String toString() {
-        return getSecondNameMechanic ()+" "+getFirstNameMechanic ()+" "
+        return getSecondNameMechanic () + " " + getFirstNameMechanic () + " "
                 + " из компании " + getMarketCompany () + " с классификацией " + getVehicleRepairSpecification ();
     }
-
-
-//    public void doRegularService(ListTransport transports) {
-//
-//        for (Transport transport transports) {
-//            if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR && transport instanceof Car) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ТО транспортного средства );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            }
-//            if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_BUS && transport instanceof Bus) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ТО транспортного средства );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            } else if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_TRUCK && transport instanceof Truck) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ТО транспортного средства );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            }
-//
-//
-//        }
-//    }
-//
-//    public void doRepairTransport(ListTransport transports) {
-//
-//        for (Transport transport transports) {
-//            if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_CAR && transport instanceof Car) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ремонт );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            }
-//            if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_BUS && transport instanceof Bus) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ремонт );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            } else if (getVehicleRepairSpecification () == VehicleRepairSpecification.SPECIFICATION_TRUCK && transport instanceof Truck) {
-//                System.out.print ( Механик + getSecondNameMechanic () + +getFirstNameMechanic () + +проводит ремонт );
-//                System.out.println ( +transport.getBrand () + +transport.getModel () );
-//            }
-//
-//
-//        }
-//    }
 
 }
