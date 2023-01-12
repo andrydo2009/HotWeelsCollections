@@ -25,3 +25,4 @@ public enum Carrying {
         return " грузоподъемность от " + getMinimalCapacity() + " тонн, до " + getMaximalCapacity()+" тонн";
     }
 }
+//

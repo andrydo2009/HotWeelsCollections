@@ -7,3 +7,4 @@ public class CantDiagnosisException extends Exception {
         this.transport=transport;
     }
 }
+//

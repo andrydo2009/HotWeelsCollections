@@ -31,3 +31,4 @@ public enum Seats {
         return " вместимость от " + getMinimalSeats() + " мест, до " + getMaximalSeats()+" мест";
     }
 }
+//
